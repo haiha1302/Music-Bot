@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const fs = require('fs');
 const discord = require('discord.js');
 
@@ -36,4 +38,4 @@ for (const file of player) {
     client.player.on(file.split(".")[0], event.bind(null, client));
 };
 
-client.login(client.config.discord.token);
+client.login(process.env.BOT_TOKEN);
