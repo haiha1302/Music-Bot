@@ -1,6 +1,6 @@
 module.exports = {
     name: 'resume',
-    aliases: [],
+    aliases: ['r'],
     category: 'Music',
     utilisation: '{prefix}resume',
 
@@ -11,7 +11,7 @@ module.exports = {
 
         if (!client.player.getQueue(message)) return message.channel.send(`${client.emotes.error} - No music currently playing !`);
 
-        if (!client.player.getQueue(message).paused) return message.channel.send(`${client.emotes.error} - The music is already playing !`);
+        if (client.player.getQueue(message).paused) return message.channel.send(`${client.emotes.error} - The music is already playing !`);
 
         const success = client.player.resume(message);
 

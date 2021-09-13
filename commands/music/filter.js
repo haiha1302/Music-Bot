@@ -1,6 +1,6 @@
 module.exports = {
     name: 'filter',
-    aliases: [],
+    aliases: ['f'],
     category: 'Music',
     utilisation: '{prefix}filter [filter name]',
 
